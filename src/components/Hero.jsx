@@ -131,12 +131,14 @@ const Hero = ({ soundEnabled, onOpenCommand }) => {
                 {/* HUD Grid Overlay */}
                 <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
 
-                {/* Developer Avatar Mock Graphic */}
+                {/* Developer Avatar Profile Picture */}
                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-slate-900/90 border border-slate-800 flex flex-col items-center justify-center p-6 text-center group">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-cyan-500 to-purple-600 p-[2px] mb-4 shadow-neon-cyan group-hover:scale-110 transition-transform">
-                    <div className="w-full h-full bg-slate-950 rounded-full flex items-center justify-center text-4xl">
-                      ⚡
-                    </div>
+                  <div className="relative w-28 h-28 rounded-full bg-gradient-to-tr from-cyan-500 via-purple-500 to-pink-500 p-[2px] mb-4 shadow-neon-cyan group-hover:scale-105 transition-transform overflow-hidden">
+                    <img
+                      src="/profile.png"
+                      alt="Haider Ali"
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
 
                   <h3 className="text-xl font-bold font-outfit text-slate-100 mb-1">Haider Ali</h3>
