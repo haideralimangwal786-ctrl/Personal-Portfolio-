@@ -9,17 +9,16 @@ export default {
     extend: {
       colors: {
         dark: {
-          bg: '#070504',
-          card: 'rgba(22, 15, 10, 0.75)',
-          border: 'rgba(217, 119, 6, 0.2)',
+          bg: '#030712',
+          card: 'rgba(15, 23, 42, 0.75)',
+          border: 'rgba(255, 255, 255, 0.1)',
         },
-        luxury: {
-          obsidian: '#070504',
-          chocolate: '#1a110a',
-          brown: '#281a10',
-          bronze: '#d97706',
-          gold: '#f59e0b',
-          amber: '#fbbf24',
+        linear: {
+          cyan: '#38bdf8',
+          blue: '#3b82f6',
+          purple: '#a855f7',
+          violet: '#8b5cf6',
+          emerald: '#10b981',
         }
       },
       fontFamily: {
@@ -47,12 +46,11 @@ export default {
         }
       },
       boxShadow: {
-        'neon-gold': '0 0 25px -5px rgba(245, 158, 11, 0.4)',
-        'neon-bronze': '0 0 25px -5px rgba(217, 119, 6, 0.4)',
-        'glass-brown': '0 8px 32px 0 rgba(0, 0, 0, 0.6)',
+        'neon-cyan': '0 0 25px -5px rgba(56, 189, 248, 0.4)',
+        'neon-purple': '0 0 25px -5px rgba(168, 85, 247, 0.4)',
+        'glass-card': '0 10px 40px -10px rgba(0, 0, 0, 0.7)',
       }
     },
   },
   plugins: [],
 }
-

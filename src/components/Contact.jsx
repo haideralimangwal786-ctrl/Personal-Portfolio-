@@ -27,19 +27,19 @@ const Contact = ({ soundEnabled }) => {
   };
 
   return (
-    <section id="contact" className="py-24 relative z-10 bg-[#070504] border-t border-amber-900/30">
+    <section id="contact" className="py-24 relative z-10 bg-[#030712] border-t border-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18100a] border border-amber-900/40 text-amber-400 text-xs font-mono mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-emerald-500/30 text-emerald-400 text-xs font-mono mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             <span>LET'S CONNECT & COLLABORATE</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-outfit text-slate-100 tracking-tight mb-4">
-            Get In <span className="text-gradient-gold">Touch</span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold font-outfit text-white tracking-tight mb-4">
+            Get In <span className="text-gradient-cyan">Touch</span>
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg font-light leading-relaxed">
+          <p className="text-slate-300 text-base sm:text-lg font-light leading-relaxed">
             Have a project in mind, need Canva graphics, or require MERN full-stack development? Send a message or chat on WhatsApp!
           </p>
         </div>
@@ -55,24 +55,24 @@ const Contact = ({ soundEnabled }) => {
             className="lg:col-span-5 space-y-6"
           >
             {/* Email Card */}
-            <div className="bg-[#140e09]/90 rounded-3xl p-6 border border-amber-900/30 hover:border-amber-500/40 transition-all flex items-center justify-between group shadow-xl">
+            <div className="glass-panel rounded-3xl p-6 border border-slate-800 hover:border-sky-500/40 transition-all flex items-center justify-between group shadow-xl">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-amber-950/80 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <div className="w-12 h-12 rounded-2xl bg-sky-950/80 border border-sky-500/30 flex items-center justify-center text-sky-400">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
                   <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Official Email</span>
-                  <span className="text-sm font-semibold text-slate-200">{personalData.email}</span>
+                  <span className="text-sm font-semibold text-slate-100">{personalData.email}</span>
                 </div>
               </div>
 
               <button
                 onClick={handleCopyEmail}
                 onMouseEnter={() => playSound('hover', soundEnabled)}
-                className="p-2.5 rounded-xl bg-[#0b0805] border border-amber-950 text-slate-300 hover:text-amber-400 transition-all"
+                className="p-2.5 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 hover:text-sky-400 transition-all"
                 title="Copy Email"
               >
-                {copied ? <Check className="w-4 h-4 text-amber-400" /> : <Copy className="w-4 h-4" />}
+                {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
               </button>
             </div>
 
@@ -83,26 +83,26 @@ const Contact = ({ soundEnabled }) => {
               rel="noopener noreferrer"
               onClick={() => playSound('click', soundEnabled)}
               onMouseEnter={() => playSound('hover', soundEnabled)}
-              className="bg-[#140e09]/90 rounded-3xl p-6 border border-amber-900/30 hover:border-amber-500/50 hover:shadow-neon-gold transition-all flex items-center justify-between group block shadow-xl"
+              className="glass-panel rounded-3xl p-6 border border-slate-800 hover:border-emerald-500/50 hover:shadow-neon-cyan transition-all flex items-center justify-between group block shadow-xl"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-amber-950/80 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
                   <MessageSquare className="w-6 h-6" />
                 </div>
                 <div>
                   <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Instant WhatsApp</span>
-                  <span className="text-sm font-semibold text-slate-200">{personalData.phone}</span>
+                  <span className="text-sm font-semibold text-slate-100">{personalData.phone}</span>
                 </div>
               </div>
-              <span className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 font-bold text-xs font-outfit">
+              <span className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-400 text-slate-950 font-bold text-xs font-outfit">
                 Chat Live
               </span>
             </a>
 
             {/* Location & GitHub */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[#140e09]/90 rounded-2xl p-5 border border-amber-900/30 shadow-lg">
-                <MapPin className="w-5 h-5 text-amber-400 mb-2" />
+              <div className="glass-panel rounded-2xl p-5 border border-slate-800 shadow-lg">
+                <MapPin className="w-5 h-5 text-purple-400 mb-2" />
                 <span className="text-[10px] font-mono text-slate-400 block">LOCATION</span>
                 <span className="text-xs font-medium text-slate-200 block mt-0.5">{personalData.location}</span>
               </div>
@@ -113,9 +113,9 @@ const Contact = ({ soundEnabled }) => {
                 rel="noopener noreferrer"
                 onClick={() => playSound('click', soundEnabled)}
                 onMouseEnter={() => playSound('hover', soundEnabled)}
-                className="bg-[#140e09]/90 rounded-2xl p-5 border border-amber-900/30 hover:border-amber-500/40 transition-all block group shadow-lg"
+                className="glass-panel rounded-2xl p-5 border border-slate-800 hover:border-sky-500/40 transition-all block group shadow-lg"
               >
-                <Github className="w-5 h-5 text-amber-400 mb-2 group-hover:scale-110 transition-transform" />
+                <Github className="w-5 h-5 text-sky-400 mb-2 group-hover:scale-110 transition-transform" />
                 <span className="text-[10px] font-mono text-slate-400 block">GITHUB PROFILE</span>
                 <span className="text-xs font-medium text-slate-200 block mt-0.5">haideralimangwal786</span>
               </a>
@@ -130,8 +130,8 @@ const Contact = ({ soundEnabled }) => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
-            <div className="bg-[#140e09]/90 rounded-3xl p-8 border border-amber-900/30 relative shadow-2xl">
-              <h3 className="text-2xl font-bold font-outfit text-slate-100 mb-2">
+            <div className="glass-panel rounded-3xl p-8 border border-slate-800 relative shadow-2xl">
+              <h3 className="text-2xl font-bold font-outfit text-white mb-2">
                 Send a Direct Message
               </h3>
               <p className="text-xs text-slate-400 mb-6 font-light">
@@ -139,8 +139,8 @@ const Contact = ({ soundEnabled }) => {
               </p>
 
               {submitted ? (
-                <div className="p-8 text-center bg-amber-950/60 rounded-2xl border border-amber-500/40">
-                  <Sparkles className="w-10 h-10 text-amber-400 mx-auto mb-3 animate-bounce" />
+                <div className="p-8 text-center bg-emerald-500/10 rounded-2xl border border-emerald-500/30">
+                  <Sparkles className="w-10 h-10 text-emerald-400 mx-auto mb-3 animate-bounce" />
                   <h4 className="text-lg font-bold text-slate-100 mb-1">Message Sent Successfully!</h4>
                   <p className="text-xs text-slate-300">Thank you for reaching out, Haider Ali will get back to you shortly.</p>
                 </div>
@@ -154,7 +154,7 @@ const Contact = ({ soundEnabled }) => {
                       placeholder="e.g. Alex Mercer"
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                      className="w-full bg-[#0b0805] border border-amber-900/40 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/60 transition-all font-light"
+                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-sky-500/60 focus:ring-1 focus:ring-sky-500/60 transition-all font-light"
                     />
                   </div>
 
@@ -166,7 +166,7 @@ const Contact = ({ soundEnabled }) => {
                       placeholder="alex@example.com"
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      className="w-full bg-[#0b0805] border border-amber-900/40 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/60 transition-all font-light"
+                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-sky-500/60 focus:ring-1 focus:ring-sky-500/60 transition-all font-light"
                     />
                   </div>
 
@@ -178,14 +178,14 @@ const Contact = ({ soundEnabled }) => {
                       placeholder="Tell me about your web app project, Canva graphic needs, or data entry requirements..."
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                      className="w-full bg-[#0b0805] border border-amber-900/40 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/60 transition-all font-light resize-none"
+                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-sky-500/60 focus:ring-1 focus:ring-sky-500/60 transition-all font-light resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     onMouseEnter={() => playSound('hover', soundEnabled)}
-                    className="w-full py-4 text-xs font-bold uppercase tracking-wider text-slate-950 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 rounded-xl shadow-neon-gold hover:scale-[1.01] transition-all flex items-center justify-center gap-2 font-outfit"
+                    className="w-full py-4 text-xs font-bold uppercase tracking-wider text-slate-950 bg-gradient-to-r from-sky-400 via-teal-300 to-purple-400 rounded-xl shadow-neon-cyan hover:scale-[1.01] transition-all flex items-center justify-center gap-2 font-outfit"
                   >
                     <Send className="w-4 h-4" />
                     <span>Send Message</span>

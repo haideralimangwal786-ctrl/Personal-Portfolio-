@@ -18,7 +18,7 @@ const ProjectModal = ({ project, onClose, soundEnabled }) => {
             playSound('click', soundEnabled);
             onClose();
           }}
-          className="fixed inset-0 bg-[#050403]/85 backdrop-blur-md"
+          className="fixed inset-0 bg-slate-950/85 backdrop-blur-md"
         />
 
         {/* Modal Window */}
@@ -26,19 +26,19 @@ const ProjectModal = ({ project, onClose, soundEnabled }) => {
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="relative w-full max-w-3xl bg-[#140e09] rounded-3xl p-6 sm:p-8 border border-amber-900/40 shadow-2xl z-10 my-8 overflow-hidden"
+          className="relative w-full max-w-3xl glass-panel bg-slate-900 rounded-3xl p-6 sm:p-8 border border-sky-500/40 shadow-2xl z-10 my-8 overflow-hidden"
         >
-          {/* Top Gold Glow accent */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600" />
+          {/* Top Gradient Glow accent */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sky-400 via-indigo-500 to-purple-500" />
 
           {/* Header Bar */}
           <div className="flex items-start justify-between gap-4 mb-6">
             <div>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/80 text-amber-400 text-xs font-mono border border-amber-500/30 mb-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-950/80 text-sky-400 text-xs font-mono border border-sky-500/30 mb-2">
                 <Sparkles className="w-3 h-3" />
                 {project.badge}
               </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold font-outfit text-slate-100">
+              <h3 className="text-2xl sm:text-3xl font-extrabold font-outfit text-white">
                 {project.title}
               </h3>
             </div>
@@ -48,27 +48,27 @@ const ProjectModal = ({ project, onClose, soundEnabled }) => {
                 playSound('click', soundEnabled);
                 onClose();
               }}
-              className="p-2 rounded-xl bg-[#0b0805] border border-amber-900/40 text-slate-400 hover:text-slate-100 transition-all shrink-0"
+              className="p-2 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 hover:text-white transition-all shrink-0"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
 
           {/* Project Preview Hero Header */}
-          <div className="w-full aspect-video rounded-2xl bg-gradient-to-br from-amber-950 via-[#1a110a] to-[#070504] border border-amber-900/40 flex flex-col items-center justify-center p-6 text-center mb-6 relative overflow-hidden group">
+          <div className="w-full aspect-video rounded-2xl bg-gradient-to-br from-slate-900 via-slate-950 to-[#030712] border border-slate-800 flex flex-col items-center justify-center p-6 text-center mb-6 relative overflow-hidden group">
             <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-            <div className="w-16 h-16 rounded-2xl bg-[#0b0805] border border-amber-500/30 flex items-center justify-center text-amber-400 text-3xl mb-3 shadow-neon-gold">
+            <div className="w-16 h-16 rounded-2xl bg-slate-950 border border-sky-500/30 flex items-center justify-center text-sky-400 text-3xl mb-3 shadow-neon-cyan">
               ⚡
             </div>
-            <span className="text-sm font-mono text-amber-300 font-semibold mb-1">Interactive Project Preview</span>
+            <span className="text-sm font-mono text-sky-300 font-semibold mb-1">Interactive Project Preview</span>
             <p className="text-xs text-slate-400 max-w-md">{project.description}</p>
           </div>
 
           {/* Metrics & Highlights */}
           <div className="grid grid-cols-3 gap-3 mb-6">
             {project.metrics.map((metric, i) => (
-              <div key={i} className="bg-[#0b0805] p-3 rounded-xl border border-amber-950 text-center">
-                <CheckCircle2 className="w-4 h-4 text-amber-400 mx-auto mb-1" />
+              <div key={i} className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-center">
+                <CheckCircle2 className="w-4 h-4 text-sky-400 mx-auto mb-1" />
                 <span className="text-xs font-medium text-slate-200 block">{metric}</span>
               </div>
             ))}
@@ -84,7 +84,7 @@ const ProjectModal = ({ project, onClose, soundEnabled }) => {
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 rounded-lg bg-[#0b0805] border border-amber-950 text-xs font-mono text-amber-300"
+                className="px-3 py-1 rounded-lg bg-slate-950 border border-slate-800 text-xs font-mono text-sky-300"
               >
                 #{tag}
               </span>
@@ -92,14 +92,14 @@ const ProjectModal = ({ project, onClose, soundEnabled }) => {
           </div>
 
           {/* Action Links */}
-          <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-amber-900/30">
+          <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-800">
             {project.liveDemo && (
               <a
                 href={project.liveDemo}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => playSound('click', soundEnabled)}
-                className="flex-1 min-w-[160px] py-3 px-5 text-xs font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 rounded-xl hover:shadow-neon-gold transition-all text-center flex items-center justify-center gap-2 font-outfit"
+                className="flex-1 min-w-[160px] py-3 px-5 text-xs font-bold text-slate-950 bg-gradient-to-r from-sky-400 via-teal-300 to-purple-500 rounded-xl hover:shadow-neon-cyan transition-all text-center flex items-center justify-center gap-2 font-outfit"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Launch Live Demo</span>
@@ -111,7 +111,7 @@ const ProjectModal = ({ project, onClose, soundEnabled }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => playSound('click', soundEnabled)}
-              className="py-3 px-5 text-xs font-semibold text-slate-200 bg-[#0b0805] border border-amber-900/40 hover:border-amber-500/40 rounded-xl transition-all flex items-center gap-2 font-outfit"
+              className="py-3 px-5 text-xs font-semibold text-slate-200 bg-slate-950 border border-slate-800 hover:border-slate-700 rounded-xl transition-all flex items-center gap-2 font-outfit"
             >
               <Github className="w-4 h-4" />
               <span>GitHub Repository</span>
