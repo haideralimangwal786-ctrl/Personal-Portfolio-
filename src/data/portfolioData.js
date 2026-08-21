@@ -6,7 +6,7 @@ export const personalData = {
     "Full-Stack Web Architect",
     "Canva Graphic & UI Designer",
     "Excel & Data Entry Specialist",
-    "Flutter Mobile Developer"
+    "REST API & Database Pro"
   ],
   location: "District Chakwal, Punjab, Pakistan",
   email: "haideralimangwal786@gmail.com",
@@ -15,7 +15,7 @@ export const personalData = {
   github: "https://github.com/haideralimangwal786-ctrl",
   linkedin: "https://linkedin.com",
   resumeUrl: "#", // Can be updated to direct PDF path
-  bio: "Passionate Full-Stack Developer specializing in building high-performance MERN stack web applications, interactive user interfaces, and mobile solutions. Beyond code, I possess strong expertise in Canva graphic design, Excel data entry/management, and UI aesthetics.",
+  bio: "Passionate Full-Stack Developer specializing in building high-performance MERN stack web applications, interactive user interfaces, and custom admin solutions. Beyond code, I possess strong expertise in Canva graphic design, Excel data entry/management, and UI aesthetics.",
   stats: [
     { label: "Real World Projects", value: "5+" },
     { label: "Technologies Mastered", value: "12+" },
@@ -48,13 +48,13 @@ export const skillsData = [
     ]
   },
   {
-    category: "Mobile & DevOps Tools",
+    category: "DevOps & Cloud Tools",
     color: "from-emerald-400 to-teal-600",
     skills: [
-      { name: "Flutter Mobile (Dart)", level: 78, icon: "Smartphone" },
-      { name: "Git & GitHub", level: 88, icon: "GitBranch" },
-      { name: "Postman API Testing", level: 85, icon: "Send" },
-      { name: "Vercel Deployment", level: 90, icon: "Cloud" }
+      { name: "Git & GitHub", level: 90, icon: "GitBranch" },
+      { name: "Postman API Testing", level: 88, icon: "Send" },
+      { name: "Vercel Cloud Deployment", level: 92, icon: "Cloud" },
+      { name: "NPM & Modern Tooling", level: 85, icon: "Cpu" }
     ]
   }
 ];
@@ -100,17 +100,17 @@ export const projectsData = [
     metrics: ["Offline PWA", "Visualizer", "Fast Streaming"]
   },
   {
-    id: "wallnest",
-    title: "WallNest – High Performance Wallpaper App",
-    category: "Mobile App",
-    badge: "Flutter Mobile",
-    description: "Cross-platform mobile application utilizing Pexels REST API to deliver 4K wallpapers, favorite downloads, category filters, and Provider state management.",
-    tags: ["Flutter", "Dart", "Pexels API", "Provider", "Mobile UI"],
+    id: "wallnest-web",
+    title: "WallNest – Ultra 4K Media Gallery Hub",
+    category: "Frontend & Web",
+    badge: "Media Gallery",
+    description: "High-performance web wallpaper & media gallery app utilizing Pexels REST API to deliver 4K visual assets, instant search, category filters, and bookmarking.",
+    tags: ["React.js", "Pexels API", "Tailwind CSS", "JavaScript", "Vite"],
     featured: false,
     github: "https://github.com/haideralimangwal786-ctrl",
     liveDemo: "https://github.com/haideralimangwal786-ctrl",
     gradient: "from-amber-500/20 via-orange-500/10 to-red-500/20",
-    metrics: ["4K Quality", "Pexels API", "Cross-Platform"]
+    metrics: ["4K Wallpapers", "REST API", "Responsive"]
   },
   {
     id: "portfolio-engine",
@@ -147,10 +147,10 @@ export const servicesData = [
     badge: "Data Solutions"
   },
   {
-    title: "Flutter Cross-Platform Apps",
-    icon: "Smartphone",
-    description: "Fast, beautiful mobile applications for Android & iOS built with Flutter and RESTful backend integrations.",
-    badge: "Mobile"
+    title: "REST API & Backend Integration",
+    icon: "Server",
+    description: "Robust RESTful API design, database schemas, secure authentication (JWT), and seamless third-party API integrations.",
+    badge: "Backend & Cloud"
   }
 ];
 
@@ -177,3 +177,4 @@ export const timelineData = [
     tags: ["HTML5", "CSS3", "JavaScript", "MS Excel"]
   }
 ];
+

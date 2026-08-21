@@ -77,8 +77,8 @@ const About = ({ soundEnabled }) => {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-pink-400 shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="text-sm font-semibold text-slate-200">Cross-Platform Apps</h4>
-                    <p className="text-xs text-slate-400">Flutter mobile development</p>
+                    <h4 className="text-sm font-semibold text-slate-200">REST APIs & Cloud</h4>
+                    <p className="text-xs text-slate-400">Vercel & Postman integration</p>
                   </div>
                 </div>
               </div>
