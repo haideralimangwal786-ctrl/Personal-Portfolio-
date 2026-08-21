@@ -6,27 +6,27 @@ import { playSound } from '../utils/soundEffects';
 
 const Timeline = ({ soundEnabled }) => {
   return (
-    <section id="timeline" className="py-24 relative z-10">
+    <section id="timeline" className="py-24 relative z-10 bg-[#070504]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border-cyan-500/30 text-cyan-400 text-xs font-mono mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18100a] border border-amber-900/40 text-amber-400 text-xs font-mono mb-4">
             <Flame className="w-3.5 h-3.5" />
             <span>CAREER PATH & MILESTONES</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-outfit text-slate-100 tracking-tight mb-4">
-            Experience & <span className="text-gradient-cyan">Journey</span>
+            Experience & <span className="text-gradient-gold">Journey</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg font-light leading-relaxed">
             A chronological timeline of web development projects, design achievements, and technical growth.
           </p>
         </div>
 
-        {/* Timeline Laser Track */}
+        {/* Timeline Track */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Vertical Glowing Line */}
-          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 via-purple-500 to-pink-500 opacity-40 -translate-x-1/2" />
+          {/* Vertical Glowing Amber Line */}
+          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-amber-500 via-yellow-500 to-amber-700 opacity-40 -translate-x-1/2" />
 
           <div className="space-y-12">
             {timelineData.map((item, idx) => {
@@ -43,8 +43,8 @@ const Timeline = ({ soundEnabled }) => {
                   }`}
                 >
                   {/* Glowing Node Dot */}
-                  <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-cyan-400 shadow-neon-cyan flex items-center justify-center z-20">
-                    <div className="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></div>
+                  <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 top-1.5 w-6 h-6 rounded-full bg-[#0b0805] border-2 border-amber-400 shadow-neon-gold flex items-center justify-center z-20">
+                    <div className="w-2 h-2 rounded-full bg-amber-400 animate-ping"></div>
                   </div>
 
                   {/* Content Box */}
@@ -55,22 +55,22 @@ const Timeline = ({ soundEnabled }) => {
                   >
                     <div
                       onMouseEnter={() => playSound('hover', soundEnabled)}
-                      className="glass-panel rounded-3xl p-6 sm:p-8 border border-white/5 hover:border-cyan-500/40 transition-all group"
+                      className="bg-[#140e09]/90 rounded-3xl p-6 sm:p-8 border border-amber-900/30 hover:border-amber-500/50 transition-all group shadow-xl"
                     >
                       <div
-                        className={`flex items-center gap-2 text-cyan-400 text-xs font-mono mb-2 ${
+                        className={`flex items-center gap-2 text-amber-400 text-xs font-mono mb-2 ${
                           isEven ? 'sm:justify-end' : ''
                         }`}
                       >
-                        <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+                        <Calendar className="w-3.5 h-3.5 text-amber-400" />
                         <span>{item.period}</span>
                       </div>
 
-                      <h3 className="text-xl font-bold font-outfit text-slate-100 mb-1 group-hover:text-cyan-300 transition-colors">
+                      <h3 className="text-xl font-bold font-outfit text-slate-100 mb-1 group-hover:text-amber-300 transition-colors">
                         {item.role}
                       </h3>
 
-                      <p className="text-xs text-purple-400 font-mono mb-4">
+                      <p className="text-xs text-yellow-400 font-mono mb-4">
                         {item.company}
                       </p>
 
@@ -86,7 +86,7 @@ const Timeline = ({ soundEnabled }) => {
                         {item.tags.map((t) => (
                           <span
                             key={t}
-                            className="px-2.5 py-1 rounded-md bg-slate-900 text-[10px] font-mono text-slate-300 border border-slate-800"
+                            className="px-2.5 py-1 rounded-md bg-[#0b0805] text-[10px] font-mono text-amber-300/80 border border-amber-950"
                           >
                             #{t}
                           </span>

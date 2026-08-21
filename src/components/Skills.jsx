@@ -22,17 +22,17 @@ const Skills = ({ soundEnabled }) => {
     : skillsData.filter((s) => s.category === activeCategory);
 
   return (
-    <section id="skills" className="py-24 relative z-10">
+    <section id="skills" className="py-24 relative z-10 bg-[#070504]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border-cyan-500/30 text-cyan-400 text-xs font-mono mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18100a] border border-amber-900/40 text-amber-400 text-xs font-mono mb-4">
             <Cpu className="w-3.5 h-3.5" />
             <span>TECH STACK & TOOLS</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-outfit text-slate-100 tracking-tight mb-4">
-            Technical & Digital <span className="text-gradient-cyan">Skills</span>
+            Technical & Digital <span className="text-gradient-gold">Skills</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg font-light leading-relaxed">
             From MERN web architecture to Canva graphic designing and MS Excel data auditing.
@@ -51,8 +51,8 @@ const Skills = ({ soundEnabled }) => {
               onMouseEnter={() => playSound('hover', soundEnabled)}
               className={`px-5 py-2.5 rounded-xl text-xs font-mono font-medium transition-all ${
                 activeCategory === cat
-                  ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-slate-950 font-bold shadow-neon-cyan scale-105'
-                  : 'glass-panel text-slate-300 hover:text-cyan-400 hover:bg-slate-800'
+                  ? 'bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-slate-950 font-bold shadow-neon-gold scale-105'
+                  : 'bg-[#140e09]/80 border border-amber-900/30 text-slate-300 hover:text-amber-400 hover:bg-[#1a120c]'
               }`}
             >
               {cat}
@@ -69,10 +69,10 @@ const Skills = ({ soundEnabled }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: groupIdx * 0.1 }}
-              className="glass-panel rounded-3xl p-6 border border-white/5 relative overflow-hidden"
+              className="bg-[#140e09]/90 rounded-3xl p-6 border border-amber-900/30 relative overflow-hidden shadow-lg"
             >
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
-                <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${catGroup.color}`}></div>
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-amber-900/30">
+                <div className="w-3 h-3 rounded-full bg-amber-400"></div>
                 <h3 className="text-lg font-bold font-outfit text-slate-100">
                   {catGroup.category}
                 </h3>
@@ -85,20 +85,20 @@ const Skills = ({ soundEnabled }) => {
                     <div key={skill.name} className="space-y-2">
                       <div className="flex items-center justify-between text-xs">
                         <span className="flex items-center gap-2 font-medium text-slate-200">
-                          <IconComp className="w-4 h-4 text-cyan-400" />
+                          <IconComp className="w-4 h-4 text-amber-400" />
                           {skill.name}
                         </span>
-                        <span className="font-mono text-cyan-400">{skill.level}%</span>
+                        <span className="font-mono text-amber-400 font-semibold">{skill.level}%</span>
                       </div>
 
-                      {/* Neon Progress Bar */}
-                      <div className="h-2 w-full bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
+                      {/* Gold Progress Bar */}
+                      <div className="h-2 w-full bg-[#0b0805] rounded-full overflow-hidden p-0.5 border border-amber-900/40">
                         <motion.div
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.level}%` }}
                           viewport={{ once: true }}
                           transition={{ duration: 1, delay: 0.2 }}
-                          className={`h-full rounded-full bg-gradient-to-r ${catGroup.color}`}
+                          className="h-full rounded-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-400"
                         ></motion.div>
                       </div>
                     </div>

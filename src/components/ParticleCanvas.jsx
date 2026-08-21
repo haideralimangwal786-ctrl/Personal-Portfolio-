@@ -39,7 +39,7 @@ const ParticleCanvas = () => {
     const particleCount = Math.min(Math.floor((width * height) / 14000), 75);
     const particles = [];
 
-    const colors = ['#00f0ff', '#7000ff', '#ff007f', '#10b981'];
+    const colors = ['#f59e0b', '#d97706', '#fbbf24', '#b45309'];
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
@@ -60,7 +60,7 @@ const ParticleCanvas = () => {
 
       ctx.clearRect(0, 0, width, height);
 
-      // Draw subtle ambient glow near mouse
+      // Draw subtle ambient warm bronze glow near mouse
       const gradient = ctx.createRadialGradient(
         mouse.x,
         mouse.y,
@@ -69,8 +69,8 @@ const ParticleCanvas = () => {
         mouse.y,
         350
       );
-      gradient.addColorStop(0, 'rgba(0, 240, 255, 0.07)');
-      gradient.addColorStop(0.5, 'rgba(112, 0, 255, 0.03)');
+      gradient.addColorStop(0, 'rgba(245, 158, 11, 0.07)');
+      gradient.addColorStop(0.5, 'rgba(180, 83, 9, 0.03)');
       gradient.addColorStop(1, 'transparent');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
