@@ -27,7 +27,7 @@ const CommandPalette = ({ isOpen, onClose, soundEnabled, setSoundEnabled }) => {
     const handleKeyDown = (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
-        onClose();
+        onClose(); // Toggle state controlled by parent
       }
       if (e.key === 'Escape' && isOpen) {
         onClose();
@@ -64,7 +64,7 @@ const CommandPalette = ({ isOpen, onClose, soundEnabled, setSoundEnabled }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-slate-950/85 backdrop-blur-md"
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md"
         />
 
         {/* Command Window */}
@@ -72,18 +72,18 @@ const CommandPalette = ({ isOpen, onClose, soundEnabled, setSoundEnabled }) => {
           initial={{ opacity: 0, scale: 0.95, y: -10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: -10 }}
-          className="relative w-full max-w-xl glass-panel bg-slate-900 rounded-3xl border border-sky-500/40 shadow-2xl overflow-hidden z-10"
+          className="relative w-full max-w-xl glass-panel rounded-3xl border border-cyan-500/40 shadow-2xl overflow-hidden z-10"
         >
           {/* Top Search Input */}
           <div className="flex items-center gap-3 px-6 py-4 border-b border-slate-800">
-            <Search className="w-5 h-5 text-sky-400 shrink-0" />
+            <Search className="w-5 h-5 text-cyan-400 shrink-0" />
             <input
               type="text"
               autoFocus
               placeholder="Type a command or search section..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full bg-transparent text-sm text-white placeholder-slate-500 focus:outline-none font-mono"
+              className="w-full bg-transparent text-sm text-slate-100 placeholder-slate-500 focus:outline-none font-mono"
             />
             <button
               onClick={onClose}
@@ -107,23 +107,23 @@ const CommandPalette = ({ isOpen, onClose, soundEnabled, setSoundEnabled }) => {
                     key={cmd.id}
                     onClick={() => handleSelectCommand(cmd)}
                     onMouseEnter={() => playSound('hover', soundEnabled)}
-                    className="w-full flex items-center justify-between p-3 rounded-2xl hover:bg-slate-800/80 text-left transition-all group border border-transparent hover:border-slate-700"
+                    className="w-full flex items-center justify-between p-3 rounded-2xl hover:bg-slate-900/90 text-left transition-all group border border-transparent hover:border-slate-800"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-xl bg-slate-950 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
+                      <div className="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
                         <Icon className="w-4 h-4" />
                       </div>
                       <div>
-                        <span className="text-xs font-semibold text-slate-200 block group-hover:text-sky-300">
+                        <span className="text-xs font-semibold text-slate-200 block group-hover:text-cyan-300">
                           {cmd.title}
                         </span>
-                        <span className="text-[10px] font-mono text-slate-400">
+                        <span className="text-[10px] font-mono text-slate-500">
                           {cmd.section}
                         </span>
                       </div>
                     </div>
 
-                    <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-sky-400 group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
                   </button>
                 );
               })
@@ -131,7 +131,7 @@ const CommandPalette = ({ isOpen, onClose, soundEnabled, setSoundEnabled }) => {
           </div>
 
           {/* Footer Bar */}
-          <div className="px-6 py-3 bg-slate-950 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
+          <div className="px-6 py-3 bg-slate-950/80 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-500">
             <span>Navigation: Click or Enter</span>
             <span>ESC to close</span>
           </div>
